@@ -18,7 +18,7 @@ const seedDatabase = async () => {
 
     await Department.bulkCreate(departmentSeedData); // await create department seeds
 
-    process.exit(0);
+    process.exit(0); //exit the function
 
 };
 seedDatabase();
