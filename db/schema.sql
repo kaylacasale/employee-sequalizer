@@ -1,6 +1,5 @@
-DROP DATABASE IF EXISTS library_db;
-CREATE DATABASE library_db;
+DROP DATABASE IF EXISTS department_db;
+CREATE DATABASE department_db;
 
-USE library_db;
 
-DESCRIBE book;
+

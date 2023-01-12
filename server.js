@@ -11,7 +11,7 @@ const routes = require('./routes');
 const sequelize = require('./config/connection');
 
 //* Import model to sync table with database
-const Company = require('./models/Company')
+const Company = require('./models/Department')
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -24,6 +24,6 @@ app.use(routes);
 //* turn on connection to db and server
 //* Force false so data doesn't get dropped on every sync
 // Force true to drop/recreate table(s) on every sync
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });
