@@ -11,10 +11,9 @@ const routes = require('./routes');
 const sequelize = require('./config/connection');
 
 //* Import model to sync table with database
-const Company = require('./models/Department')
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+console.log(PORT)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
