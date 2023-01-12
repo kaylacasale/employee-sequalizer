@@ -1,7 +1,19 @@
 const path = require('path');
+const { Role } = require('../../models');
 const router = require('express').Router();
 const Employee = require('../../models/Employee');
 
+router.get('/:id', async (req, res) => {
+    try {
+        const roleData = await Role.findByPk(req.params.id, {
+            include: [{ model: Employee }],
+        });
+
+        if (!roleData) {
+
+        }
+    }
+})
 router.get('/', async (req, res) => {
     const employeeData = await Employee.findAll();
     return res.json(employeeData);
